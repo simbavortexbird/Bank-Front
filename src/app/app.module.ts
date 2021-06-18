@@ -7,10 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CustomerListComponent } from './component/customer-list/customer-list.component';
+import { CustomerSaveComponent } from './component/customer-save/customer-save.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    CustomerSaveComponent
   ],
   imports: [
     BrowserModule,
