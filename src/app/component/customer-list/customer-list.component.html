@@ -1,2 +1,19 @@
 <h2>Customer List</h2>
-<li *ngFor="let customer of customers">{{customer.name}}</li>
+
+
+<table>
+
+    <thead>
+        <td>Name</td>
+        <td>Delete</td>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.name}}</td>
+            <td><button name="delete" (click)="delete(customer.custId)">Delete</button></td>
+        </tr>
+
+    </tbody>
+
+</table>

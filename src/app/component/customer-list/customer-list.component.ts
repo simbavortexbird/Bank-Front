@@ -16,8 +16,20 @@ export class CustomerListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.findAllCustomers();
+  }
+
+  findAllCustomers(){
     this.customerService.findAll().subscribe(data =>{
       this.customers = data;
+    })
+  }
+
+  delete(idcust:number):void{
+    this.customerService.delete(idcust).subscribe(data =>{
+      this.findAllCustomers()
+    }, err =>{
+      console.log(err)
     })
   }
 

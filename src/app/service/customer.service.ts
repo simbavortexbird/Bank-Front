@@ -22,11 +22,12 @@ export class CustomerService {
   }
 
   findById(idcust:number):Observable<Customer>{
-    return this.httpClient.get<Customer>(`${this.url}/${idcust}}`);
+    return this.httpClient.get<Customer>(`${this.url}/${idcust}`);
   }
 
   delete(idcust:number):Observable<Customer>{
-    return this.httpClient.delete<Customer>(`${this.url}/${idcust}}`);
+    console.log()
+    return this.httpClient.delete<Customer>(`${this.url}/${idcust}`);
   }
 
   save(customer:Customer):Observable<Customer>{
